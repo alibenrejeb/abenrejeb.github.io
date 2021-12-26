@@ -44,6 +44,12 @@ td, th {
   padding: 0;
 }
 
+@keyframes arc-loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
 @keyframes rotate-1 {
   from {
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0);
@@ -75,6 +81,9 @@ td, th {
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
+  animation: arc-loader 0.01s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
   z-index: 10;
   display: flex;
   align-items: center;
