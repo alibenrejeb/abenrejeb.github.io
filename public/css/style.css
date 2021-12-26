@@ -136,4 +136,43 @@ a {
   text-align: center;
 }
 
+.footer {
+  background-color: #353535;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.footer__title {
+  color: white;
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+}
+.footer__list__item {
+  margin: 0.5rem 0;
+}
+.footer__list__item:first-child {
+  margin-top: 0;
+}
+.footer__list__item:last-child {
+  margin-bottom: 0;
+}
+.footer__link {
+  color: white;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__icon {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
