@@ -1,47 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
-  list-style: none;
-}
-
-button, input, select {
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img, video {
-  height: auto;
-  max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
+.manual__step, .description__btn {
+  box-shadow: 0.3rem 0.3rem 10px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes arc-loader {
@@ -74,6 +33,20 @@ td, th {
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .loading {
   position: fixed;
   height: 100%;
@@ -102,26 +75,19 @@ td, th {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  border-bottom: 3px solid #9356DC;
 }
 .loading__item--arc:nth-child(1) {
-  border-bottom: 3px solid #FF79DA;
   animation: rotate-1 1.15s linear infinite;
   animation-delay: -0.8s;
 }
 .loading__item--arc:nth-child(2) {
-  border-bottom: 3px solid #9356DC;
   animation: rotate-2 1.15s linear infinite;
   animation-delay: -0.4s;
 }
 .loading__item--arc:nth-child(3) {
-  border-bottom: 3px solid #554d73;
   animation: rotate-3 1.15s linear infinite;
   animation-delay: 0s;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .header {
@@ -173,6 +139,104 @@ a {
 .footer__icon {
   width: 1.2rem;
   margin-right: 0.5rem;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  font-size: 1.1875rem;
+  position: relative;
+  background-color: #EAEAEA;
+}
+.location__icon {
+  margin-right: 1rem;
+}
+.location__text {
+  font-weight: bold;
+  color: #353535;
+}
+
+.description {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.description__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.description__subtitle {
+  margin: 1.5rem 0;
+}
+.description__btn {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  background-color: #686868;
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  border-radius: 100px;
+  cursor: pointer;
+}
+.description__btn:hover {
+  opacity: 0.75;
+}
+
+@media screen and (min-width: 768px) {
+  .manual {
+    padding: 0.625rem 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .manual {
+    padding: 0.625rem 3.125rem;
+  }
+}
+.manual h3 {
+  margin-left: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .manual__container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.25rem;
+  }
+}
+.manual__icon {
+  width: 3.125rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #818181;
+}
+.manual__step {
+  flex: 1;
+  background-color: #F6F6F6;
+  border-radius: 1.5625rem;
+  margin: 1.25rem 1.875rem;
+  cursor: pointer;
+}
+.manual__step:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.manual__step:hover .manual__icon {
+  color: #9356DC;
+}
+.manual__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4.375rem;
+  font-weight: bold;
+}
+.manual__item {
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
+  width: 0.9375rem;
+  text-align: center;
+  margin: 0 0.625rem 0 -0.625rem;
+  padding: 0.3125rem 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

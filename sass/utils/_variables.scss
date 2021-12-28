@@ -1,11 +1,18 @@
-$loading-color: (
-    color-1: #FF79DA,
-    color-2: #9356DC,
-    color-3: #554d73
-);
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$bgcolor-primary: #EAEAEA;
+$bgcolor-secondary: #F6F6F6;
+$bgcolor-tertiary: #818181;
 
 $loading-animation-delay: (
     animation-delay-1: -0.8s,
     animation-delay-2: -0.4s,
     animation-delay-3: 0s
+);
+
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1280px,
+    large: 1600px
 );

@@ -1,0 +1,87 @@
+.location {
+    display: flex;
+    justify-content: center;
+    padding: px2rem(20) px2rem(16);
+    font-size: px2rem(19);
+    position: relative;
+    background-color: $bgcolor-primary;
+    &__icon {
+        margin-right: px2rem(16);
+    }
+    &__text {
+        font-weight: bold;
+        color: #353535;
+    }
+}
+
+.description {
+    padding: px2rem(32);
+    text-align: center;
+    background-color: $bgcolor-secondary;
+    &__title {
+        font-size: px2rem(24);
+        font-weight: bold;
+    }
+    &__subtitle {
+        margin: px2rem(24) 0;
+    }
+    &__btn {
+        @include button;
+    }
+}
+
+.manual {
+    @include tablet {
+        padding: px2rem(10) px2rem(20);
+    }
+    @include desktop {
+        padding: px2rem(10) px2rem(50);
+    }
+    h3 {
+        margin-left: px2rem(20);
+    }
+    &__container {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: px2rem(20);
+        }       
+    }
+    &__icon {
+        width: px2rem(50);
+        font-size: px2rem(20);
+        text-align: center;
+        color: $bgcolor-tertiary;
+    }
+    &__step {
+        flex: 1;
+        background-color: $bgcolor-secondary;
+        border-radius: px2rem(25);
+        @extend %shadow;
+        margin: px2rem(20) px2rem(30);
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(147, 86, 220, 0.1);
+            .manual__icon {
+                color: $color-primary; 
+            }
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: px2rem(70);
+        font-weight: bold;
+    }
+    &__item {
+        background-color: $color-primary;
+        border-radius: 50%;
+        color: white;
+        width: px2rem(15);
+        text-align: center;
+        margin: 0 px2rem(10) 0 px2rem(-10);
+        padding: px2rem(5) px2rem(8);
+    }
+}
