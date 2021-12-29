@@ -1,7 +1,58 @@
-%shadow {
-    box-shadow: 0.3rem 0.3rem 10px rgba(0, 0, 0, 0.2);
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+%flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+%shadow {
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
+}
 %font-family-txt {
     font-family: $font-txt;
+}
+%font-family-title {
+    font-family: $font-title;
+}
+%favorite {
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    background-color: black;
+    border: 0 transparent solid;
+    cursor: pointer;
+}
+%favorite-before {
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+}
+%like {
+    position: absolute;
+    transition-duration: .25s;
+    background-color: $bgcolor-secondary;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: lighten;
+}
+%ellipsis {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
