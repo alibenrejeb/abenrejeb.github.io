@@ -1,6 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-.manual__step, .description__btn {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.card, .manual__step, .description__btn {
   box-shadow: 0.3rem 0.3rem 10px rgba(0, 0, 0, 0.2);
+}
+
+.card__subtitle, .card__title, .card__tagged, .restaurants__title, .manual__content, .manual h2, .description__subtitle, .description__title, .location__text {
+  font-family: "Roboto", sans-serif;
 }
 
 @keyframes arc-loader {
@@ -91,15 +96,15 @@ a {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
   padding: 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 2;
 }
-.header__title {
-  font-family: "Shrikhand", "cursive";
-  margin: 0;
-  text-align: center;
+.header__img {
+  width: 9rem;
 }
 
 .footer {
@@ -145,18 +150,13 @@ a {
   display: flex;
   justify-content: center;
   padding: 1.25rem 1rem;
-  font-size: 1.1875rem;
+  font-size: 1.2rem;
   position: relative;
   background-color: #EAEAEA;
 }
 .location__icon {
   margin-right: 1rem;
 }
-.location__text {
-  font-weight: bold;
-  color: #353535;
-}
-
 .description {
   padding: 2rem;
   text-align: center;
@@ -164,7 +164,6 @@ a {
 }
 .description__title {
   font-size: 1.5rem;
-  font-weight: bold;
 }
 .description__subtitle {
   margin: 1.5rem 0;
@@ -173,10 +172,10 @@ a {
   border: 0;
   padding: 0.75rem 1.5rem;
   color: white;
-  background-color: #686868;
   background: linear-gradient(to right bottom, #FF79DA, #9356DC);
   border-radius: 100px;
   cursor: pointer;
+  font-family: "Roboto", sans-serif;
 }
 .description__btn:hover {
   opacity: 0.75;
@@ -184,15 +183,15 @@ a {
 
 @media screen and (min-width: 768px) {
   .manual {
-    padding: 0.625rem 1.25rem;
+    padding: 0.5rem 1.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .manual {
-    padding: 0.625rem 3.125rem;
+    padding: 0.5rem 3rem;
   }
 }
-.manual h3 {
+.manual h2 {
   margin-left: 1.25rem;
 }
 @media screen and (min-width: 768px) {
@@ -203,7 +202,7 @@ a {
   }
 }
 .manual__icon {
-  width: 3.125rem;
+  width: 3rem;
   font-size: 1.25rem;
   text-align: center;
   color: #818181;
@@ -211,8 +210,8 @@ a {
 .manual__step {
   flex: 1;
   background-color: #F6F6F6;
-  border-radius: 1.5625rem;
-  margin: 1.25rem 1.875rem;
+  border-radius: 1.5rem;
+  margin: 1.25rem 2rem;
   cursor: pointer;
 }
 .manual__step:hover {
@@ -226,17 +225,106 @@ a {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 4.375rem;
-  font-weight: bold;
+  height: 4.5rem;
 }
 .manual__item {
   background-color: #9356DC;
   border-radius: 50%;
   color: white;
-  width: 0.9375rem;
+  width: 1rem;
   text-align: center;
-  margin: 0 0.625rem 0 -0.625rem;
-  padding: 0.3125rem 0.5rem;
+  margin: 0 0.5rem 0 -0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 2rem 1rem;
+}
+.restaurants__title {
+  margin-left: 1.5rem;
+}
+.restaurants__container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__container {
+    display: flex;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  flex: 40%;
+  margin: 0.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  border: 0px solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+}
+.card__tagged {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+.card__footer {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__content {
+  flex: 1;
+}
+.card__title {
+  margin: 0;
+  margin-bottom: 0.25rem;
+}
+.card__subtitle {
+  margin: 0;
+}
+
+.favorite__btn {
+  height: 2rem;
+  width: 2rem;
+  position: relative;
+  background-color: black;
+}
+.favorite__btn::before {
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+.favorite__btn:hover::before {
+  opacity: 1;
+}
+.favorite__btn:hover .favorite__like--dislike {
+  opacity: 0;
+}
+.favorite__like {
+  position: absolute;
+  transition-duration: 0.25s;
+  background-color: white;
+  mix-blend-mode: lighten;
 }
 
 /*# sourceMappingURL=style.css.map */
