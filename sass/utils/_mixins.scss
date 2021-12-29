@@ -1,20 +1,14 @@
-@mixin button {
+@mixin button($color1: $color-secondary, $color2: $color-primary, $font: $font-txt) {
     border: 0;
     padding: 0.75rem 1.5rem;
     color: white;
-    background-color: #686868;
-    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    background: linear-gradient(to right bottom, $color1, $color2);
     border-radius: 100px;
     cursor: pointer;
+    font-family: $font;
     @extend %shadow;
     &:hover {
         opacity: 0.75;
-    }
-}
-
-@mixin mobile {
-    @media screen and (max-width: map-get($breakpoints, mobile)) {
-        @content;
     }
 }
 
