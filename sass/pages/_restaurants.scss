@@ -1,0 +1,139 @@
+.banner-img {
+    max-width: 100%;
+    max-height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+.lunch {
+    margin-top: -5rem;
+    @include tablet {
+        margin: -5rem 10rem 0 10rem;
+    }
+    border-radius: 2rem 2rem 0 0;
+    background-color: $bgcolor-secondary;
+    z-index: 1;
+    position: relative;
+    &__header {
+        padding: 1rem 2rem 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        @extend %font-family-title;
+    }
+    &__btn {
+        @extend %favorite;
+        &::before {
+            @extend %favorite-before;
+        }
+        &:hover::before {
+            opacity: 1;
+        }
+        &:hover .lunch__like--dislike {
+            opacity: 0;
+        }
+    }
+    &__like {
+        @extend %like;
+    }
+}
+.lunch-menus {
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        padding: 0 5rem 0 5rem;
+    };
+}
+.menu {
+    flex: 1;
+    max-width: 100%;
+    padding: 0 1rem;
+    overflow: hidden;
+    &__title {
+        position: relative;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+        font-weight: normal;
+        @extend %font-family-txt;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 3rem;
+            height: 0.25rem;
+            background-color: $color-tertiary;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &__item {
+        display: flex;
+        background-color: $color-white;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        @extend %shadow;
+        overflow: hidden;
+        cursor: pointer;
+        max-width: 100%;
+        animation: appear .6s;
+        animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+        animation-fill-mode: both;
+        transform: scale(0);
+        &:hover .menu__checked {
+            margin-right: -1rem;
+        }
+    }
+    &__header {
+        @extend %ellipsis;
+        flex: 1;
+    }
+    &__subtitle {
+        @extend %ellipsis;
+        @extend %font-family-txt;
+    }
+    &__description {
+        @extend %ellipsis;
+        @extend %font-family-txt;
+    }
+    &__price {
+        font-weight: bold;
+        @extend %flex-end;
+        padding-left: 0.5rem;
+    }
+    &__checked {
+        @extend %flex-center;
+        background-color: $color-tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        transition-duration: .5s;
+    }
+    &__iconContainer {
+        @extend %flex-center;
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        transform: rotate(180deg);
+        transition-duration: .5s;
+    }
+    &:hover &__iconContainer {
+        transform: rotate(0);
+    }
+    &__icon {
+        color: $color-tertiary;
+    }
+}
+.order {
+    @extend %flex-center;
+    padding: 3rem 0;
+    &__btn {
+        @include button;
+        cursor: pointer;
+    }
+}
+@for $i from 0 to 5 {
+    .delay-#{$i} {
+        animation-delay: #{calc($i/10)}s;
+    }
+}

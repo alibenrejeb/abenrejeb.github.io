@@ -1,45 +1,36 @@
 .footer {
     background-color: #353535;
-
     .container {
-        display: flex;
-        flex-direction: column;
+        @extend %flex-column;
         padding: 1rem;
     }
-
     &__title {
         color: white;
-        font-family: "Shrikhand", "cursive";
+        @extend %font-family-title;
         margin: 0;
         font-size: 1rem;
         margin-bottom: 1rem;
     }
-
     &__list {
         margin: 0;
         padding: 0;
-
         &__item {
             margin: 0.5rem 0;
-
+            @extend %font-family-txt;
             &:first-child {
                 margin-top: 0;
             }
-
             &:last-child {
                 margin-bottom: 0;
             }
         }
     }
-
     &__link {
         color: white;
-
         &:hover {
             text-decoration: underline;
         }
     }
-
     &__icon {
         width: 1.2rem;
         margin-right: 0.5rem;
