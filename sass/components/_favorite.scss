@@ -1,0 +1,26 @@
+.favorite {
+    cursor: pointer;
+    &__heart {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        transition: all .5s;
+        transform: translateY(-50%);
+        &--right {
+            right: 2rem;
+        }
+    }
+    & > .fas {
+        opacity: 0;
+        color: transparent;
+        background-image: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+        // La propriété background-clip définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (padding) ou la boîte de contenu.
+        background-clip: text;
+        -webkit-background-clip: text;
+
+    }
+    &:hover > .fas {
+        opacity: 1;
+        transform: translateY(-51%) scale(1.2);
+    }
+}

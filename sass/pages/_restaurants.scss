@@ -22,21 +22,6 @@
     &__title {
         @extend %font-family-title;
     }
-    &__btn {
-        @extend %favorite;
-        &::before {
-            @extend %favorite-before;
-        }
-        &:hover::before {
-            opacity: 1;
-        }
-        &:hover .lunch__like--dislike {
-            opacity: 0;
-        }
-    }
-    &__like {
-        @extend %like;
-    }
 }
 .lunch-menus {
     @include tablet {
