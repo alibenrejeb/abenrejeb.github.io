@@ -154,21 +154,3 @@
         @extend %font-family-txt;
     }
 }
-
-.favorite {
-    &__btn {
-        @extend %favorite;
-        &::before {
-            @extend %favorite-before;
-        }
-        &:hover::before {
-            opacity: 1;
-        }
-        &:hover .favorite__like--dislike {
-            opacity: 0;
-        }
-    }
-    &__like {
-        @extend %like;
-    }
-}
