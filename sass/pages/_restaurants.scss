@@ -22,6 +22,9 @@
     &__title {
         @extend %font-family-title;
     }
+    &__heart {
+        @extend %heart;
+    }
 }
 .lunch-menus {
     @include tablet {

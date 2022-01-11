@@ -147,4 +147,7 @@
         margin: 0;
         @extend %font-family-txt;
     }
+    &__heart {
+        @extend %heart;
+    }
 }
