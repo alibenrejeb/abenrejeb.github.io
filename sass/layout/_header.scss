@@ -1,11 +1,15 @@
 .header {
     @extend %flex-center;
+    flex-direction: column;
     padding: 1rem 1rem;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
     position: relative;
     z-index: 2;
-    &__img {
-        width: 9rem;
+    &__title {
+        @extend %font-family-title;
+        margin: 0;
+        font-size: 32px;
+        font-weight: 300;
     }
     &__arrow {
         position: absolute;

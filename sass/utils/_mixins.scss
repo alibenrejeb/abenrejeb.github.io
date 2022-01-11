@@ -1,3 +1,19 @@
+@mixin pseudo-element {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;  
+}
+
+@mixin position($value) {
+    top: $value;
+    left: $value;
+    right: $value;
+    bottom: $value;
+}
+
 @mixin button($color1: $color-secondary, $color2: $color-primary, $font: $font-txt) {
     border: 0;
     padding: 0.75rem 1.5rem;

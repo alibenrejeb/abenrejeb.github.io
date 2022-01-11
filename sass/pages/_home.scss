@@ -30,12 +30,6 @@
 }
 
 .manual {
-    @include tablet {
-        padding: 0.5rem 1.25rem;
-    }
-    @include desktop {
-        padding: 0.5rem 3rem;
-    }
     h2 {
         margin-left: 1.25rem;
     }
