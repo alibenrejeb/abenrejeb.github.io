@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'mvn --version'
-                sh 'npm sass'
+                sh 'npm install'
             }
         }
     }
