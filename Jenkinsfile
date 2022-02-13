@@ -1,6 +1,5 @@
 pipeline {
-    agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
-    tools {nodejs "nodejs"}
+    agent { docker { image 'jimador/docker-jdk-8-maven-node' } }
     stages {
         stage('build') {
             steps {
